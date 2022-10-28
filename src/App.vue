@@ -1,30 +1,27 @@
 <template>
-  <div class="container">
-    hello {{ state.message }}
-    <div>数字: {{ count }}</div>
-    <div>两倍数字: {{ doubleCount }}</div>
+  <div id="app">
+    <router-link :to="{name:'Login', params:{id:123, userName:'hangge'}}">
+      跳转到 hello
+    </router-link>
+
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      state: {
-        message: "run"
-      }, count: 1,
-      doubleCount: 4
-    }
-  }
+  name: 'App'
 }
 </script>
-<style lang="scss">
-body {
-  font-size: 16px;
-}
 
-.container {
-  text-align: center;
-  line-height: 2;
+<style lang="scss">
+#app {
+  background: #eee;
+  height: 100vh;
+  overflow: hidden;
+  font-weight: 400 !important;
+}
+.el-button{
+  font-weight: 400 !important;
 }
 </style>
