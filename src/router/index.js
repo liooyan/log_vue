@@ -11,8 +11,8 @@ const routes = [{
         path: '/login/:id',
         name: 'Login',
         component: Index,
-        props: {newsletterPopup: false},
         children: [{
+            name: 'LoginProfile',
             path: 'profile',
             component: Profile,
         }]
@@ -41,6 +41,10 @@ const routes = [{
         path: '/test/06',
         name: 'test06',
         component: () => import("@/test/06.vue"),
+    },  {
+        path: '/temp/01',
+        name: 'temp01',
+        component: () => import("@/temp/01.vue"),
     }
 ]
 

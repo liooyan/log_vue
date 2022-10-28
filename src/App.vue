@@ -1,5 +1,8 @@
 <template>
   <div>
+    <router-link :to="{name:'LoginProfile', params:{id:123, userName:'hangge'}}">
+      跳转到 hello
+    </router-link>
     <router-view />
   </div>
 </template>
